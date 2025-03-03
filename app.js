@@ -19,8 +19,9 @@ function agregarAmigo() {
 }
 
 function actualizarLista() {
+    //Aquí limpiamos la lista antes de agregar los elementos.
     let listaHTML = document.querySelector("#listaAmigos");
-    listaHTML.innerHTML = ""; // Limpia la lista antes de agregar los elementos.
+    listaHTML.innerHTML = "";
 
     //Ahora se agrega los nombres en la lista, que se agregue uno de bajo de otro.
     listaAmigos.forEach((amigo) => {
@@ -31,7 +32,8 @@ function actualizarLista() {
 }
 
 function limpiarInput() {
-        document.querySelector(`#amigo`).value = ``;
+    //Con esto hacemos que al agregar un elemento, automáticamente se limpie el input para poder ingresar otro sin necesidad de borrar manualmente.
+    document.querySelector(`#amigo`).value = ``;
 }
 
 //Ahora vamos a crear la función "sortearAmigo()"
