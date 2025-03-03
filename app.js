@@ -34,19 +34,24 @@ function limpiarInput() {
         document.querySelector(`#amigo`).value = ``;
 }
 
+//Ahora vamos a crear la función "sortearAmigo()"
 function sortearAmigo() {
+    //Primero validamos que el usuario al menos haya agregado 2 nombres a la lista.
     if (listaAmigos.length < 2) {
         alert(`Por favor, ingresa al menos 2 nombres para poder realizar el sorteo`);
         return;
     }
     
+    //Aquí realizamos el sorteo y lo imprimimos en la consola.
     let amigoAleatorio = Math.floor(Math.random()*listaAmigos.length);
     let amigoSorteado = listaAmigos[amigoAleatorio];
     console.log(amigoSorteado);
     
+    //Aquí limpiamos el resultado anterior.
     let resultadoHTML = document.querySelector("#resultado");
-    resultadoHTML.innerHTML = ""; // Limpia el resultado anterior
+    resultadoHTML.innerHTML = "";
 
+    //Aquí realizamos la impresión del amigo sorteado en el DOM.
     let li = document.createElement("li");
     li.textContent = `El amigo secreto es: ${amigoSorteado}`;
     resultadoHTML.appendChild(li);
