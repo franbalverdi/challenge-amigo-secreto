@@ -1,7 +1,7 @@
 <h1 align="center">Challenge del amigo secreto</h1>
 <img src="/assets/amigo-secreto.png">
 
-El objetivo de la app es poder agregar un listado de amigos para que luego se sortée un amigo ganador al final.
+El objetivo de la app es poder agregar un listado de amigos para que luego se sortee un amigo ganador al final.
 
 Para eso necesitamos crear un input donde podamos escribir el nombre de nuestro amigo.
 
