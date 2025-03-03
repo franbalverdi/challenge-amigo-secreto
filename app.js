@@ -45,7 +45,7 @@ function sortearAmigo() {
     console.log(amigoSorteado);
     
     let resultadoHTML = document.querySelector("#resultado");
-    resultadoHTML.innerHTML = ""; // Limpiar el resultado anterior
+    resultadoHTML.innerHTML = ""; // Limpia el resultado anterior
 
     let li = document.createElement("li");
     li.textContent = `El amigo secreto es: ${amigoSorteado}`;
