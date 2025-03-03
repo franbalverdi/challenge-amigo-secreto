@@ -5,19 +5,26 @@
 
 let listaAmigos = [];
 
-function agregarAmigo() {
-let nuevoAmigo = document.querySelector(`#amigo`).value;
-if (nuevoAmigo == ``) {
-    alert(`Error, ingresa un nombre válido`);
-} else {
-    listaAmigos.push(nuevoAmigo);
-    limpiarInput();
-    console.log(listaAmigos);
+function asignarTextoElemento(elemento, texto) {
+    let elementoHTML = document.querySelector(elemento);
+    elementoHTML.innerHTML = texto;
+    return;
 }
+
+function agregarAmigo() {
+    //Se agrega el .trim() para que también arroje el error cuando pongo un espacio. 
+    let nuevoAmigo = document.querySelector(`#amigo`).value.trim();
+    if (nuevoAmigo === ``) {
+        alert(`Error, ingresa un nombre válido`);
+    } else {
+        listaAmigos.push(nuevoAmigo);
+        //Ahora se agrega los nombres en la lista, que se agregue uno de bajo de otro.
+        asignarTextoElemento(`ul`, listaAmigos);
+        limpiarInput();
+        console.log(listaAmigos);
+    }
 }
 
 function limpiarInput() {
         document.querySelector(`#amigo`).value = ``;
 }
-
-agregarAmigo();
