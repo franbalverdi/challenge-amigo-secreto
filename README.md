@@ -1,5 +1,5 @@
 <h1 align="center">Challenge del amigo secreto</h1>
-![Imagen ilustrativa de un usuario realizando el challenge](image.png)
+![Imagen ilustrativa de un usuario realizando el challenge](..assets/image.png)
 
 El objetivo de la app es poder agregar un listado de amigos para que luego se sortée un amigo ganador al final.
 
